@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты анализа TF-IDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .back-link {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Результаты анализа TF-IDF</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Слово</th>
+                <th>TF (частота)</th>
+                <th>IDF</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for word in word_stats %}
+            <tr>
+                <td>{{ word.word }}</td>
+                <td>{{ word.tf }}</td>
+                <td>{{ "%.2f"|format(word.idf) }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <a href="/" class="back-link">Назад к загрузке файла</a>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
